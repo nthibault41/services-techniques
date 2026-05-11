@@ -5,24 +5,24 @@ import { supabase } from "./supabase";
 // DONNÉES STATIQUES (utilisateurs — gérés en dur pour l'instant)
 // ═══════════════════════════════════════════════════════════════════
 const USERS = [
-  { id: "u1", nom: "Émile MORIN",       role: "demandeur",  org: "École Emile MORIN",        avatar: "🏫", color: "#0ea5e9" },
+  { id: "u1", nom: "École Emile MORIN",       role: "demandeur",  org: "École Emile MORIN",        avatar: "🏫", color: "#0ea5e9" },
   { id: "u2", nom: "Association Sportive",    role: "demandeur",  org: "Association Omnisports Municipale", avatar: "⚽", color: "#10b981" },
   { id: "u3", nom: "Maison de Quartier Nord", role: "demandeur",  org: "MJC du Quartier Nord",              avatar: "🏢", color: "#f59e0b" },
   { id: "u4", nom: "Frank Leloup",             role: "technicien", org: "Service Voirie & Bâtiments",        avatar: "🔧", color: "#8b5cf6" },
-  { id: "u5", nom: "Frank Leloup",         role: "technicien", org: "Service Eau & Électricité",         avatar: "💧", color: "#06b6d4" },
+  { id: "u5", nom: "Richard Chartier",         role: "technicien", org: "Service Eau & Électricité",         avatar: "💧", color: "#06b6d4" },
   { id: "u6", nom: "Franck Maury",            role: "admin",      org: "Direction des Services Techniques", avatar: "👩‍💼", color: "#ef4444" },
 ];
 
 const INVENTAIRE_DEFAUT = [
   { id: "m1",  nom: "Table pliante",         categorie: "Mobilier",     qte: 30,  dispo: 28, etat: "bon",   icon: "🪑", reservable: true,  description: "Tables rectangulaires 180cm" },
-  { id: "m2",  nom: "Chaise pliante",        categorie: "Mobilier",     qte: 120, dispo: 112,etat: "bon",   icon: "🪑", reservable: true,  description: "Chaises empilables légères" },
+  { id: "m2",  nom: "Chaise rouge",        categorie: "Mobilier",     qte: 120, dispo: 112,etat: "bon",   icon: "🪑", reservable: true,  description: "Chaises empilables légères" },
   { id: "m3",  nom: "Barrière Heras",        categorie: "Sécurité",     qte: 50,  dispo: 40, etat: "bon",   icon: "🚧", reservable: true,  description: "Clôtures temporaires 3.5m" },
   { id: "m4",  nom: "Podium mobile",         categorie: "Événementiel", qte: 4,   dispo: 3,  etat: "bon",   icon: "🎤", reservable: true,  description: "Estrades modulables 1×2m" },
   { id: "m5",  nom: "Sono portable",         categorie: "Événementiel", qte: 3,   dispo: 2,  etat: "bon",   icon: "🔊", reservable: true,  description: "Système PA 2×200W avec micro" },
   { id: "m6",  nom: "Groupe électrogène",    categorie: "Énergie",      qte: 2,   dispo: 2,  etat: "bon",   icon: "⚡", reservable: true,  description: "Génératrice 5kVA silencieuse" },
   { id: "m7",  nom: "Tondeuse thermique",    categorie: "Espaces verts",qte: 5,   dispo: 3,  etat: "moyen", icon: "🌿", reservable: false, description: "Tondeuses autotractées 53cm" },
   { id: "m8",  nom: "Karcher haute pression",categorie: "Nettoyage",    qte: 4,   dispo: 4,  etat: "bon",   icon: "💦", reservable: false, description: "Nettoyeurs haute pression" },
-  { id: "m9",  nom: "Tente de réception",    categorie: "Événementiel", qte: 3,   dispo: 3,  etat: "bon",   icon: "⛺", reservable: true,  description: "Chapiteaux 6×12m ignifugés" },
+  { id: "m9",  nom: "Barnums",    categorie: "Événementiel", qte: 3,   dispo: 3,  etat: "bon",   icon: "⛺", reservable: true,  description: "Chapiteaux 6×12m ignifugés" },
   { id: "m10", nom: "Panneau signalisation", categorie: "Voirie",       qte: 20,  dispo: 15, etat: "moyen", icon: "🚦", reservable: true,  description: "Panneaux K10 / K1 / B0" },
 ];
 
@@ -580,7 +580,7 @@ export default function App() {
       `}</style>
       <div style={{ textAlign:"center", marginBottom:42, animation:"float 3.2s ease-in-out infinite" }}>
         <div style={{ fontSize:56, marginBottom:12 }}>🏛️</div>
-        <div style={{ fontWeight:800, fontSize:28, color:"white" }}>Services-Techniques</div>
+        <div style={{ fontWeight:800, fontSize:28, color:"white" }}>Services Techniques</div>
         <div style={{ fontSize:14, color:"#7da4d8", marginTop:6 }}>Portail municipal — Coeur de Sologne</div>
       </div>
       <div style={{ width:"100%", maxWidth:700 }}>
